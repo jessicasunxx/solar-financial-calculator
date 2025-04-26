@@ -48,12 +48,6 @@ This tool allows users to quickly calculate key financial metrics for a potentia
 - Tailwind CSS
 - Babel (for JSX transformation)
 
-### Browser Compatibility
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
-
 ## Financial Model
 
 The calculator uses standard financial metrics for solar project evaluation:
