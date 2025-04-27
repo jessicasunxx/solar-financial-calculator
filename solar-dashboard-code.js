@@ -1,4 +1,4 @@
-/* solar-dashboard-code.js - solar project calculator for Fram Energy*/
+// solar-dashboard-code.js - solar project calculator for Fram Energy
 
 const { useState, useEffect } = React;
 const {
