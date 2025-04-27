@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Solar Project Financial Calculator</title>
-  <!-- Core Libraries -->
+  <!-- Core React Libraries -->
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <!-- Tailwind CSS for styling -->
   <script src="https://cdn.tailwindcss.com"></script>
   
   <!-- Recharts Dependencies -->
@@ -21,11 +21,13 @@
   <script src="https://unpkg.com/d3-time-format@4.1.0/dist/d3-time-format.min.js"></script>
   <script src="https://unpkg.com/recharts@2.5.0/umd/Recharts.js"></script>
   
-  <!-- External component script -->
-  <script src="./solar-dashboard-code.js"></script>
+  <!-- Load the component JS file -->
+  <script src="solar-dashboard-code.js"></script>
 </head>
 <body class="bg-gray-100">
+  <!-- Root element for React app -->
   <div id="root">
+    <!-- Loading spinner shown until React loads -->
     <div class="flex justify-center items-center h-screen">
       <div class="text-center">
         <div class="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-600"></div>
@@ -34,24 +36,24 @@
     </div>
   </div>
 
-  <!-- Initialize app -->
-  <script type="text/babel">
+  <!-- Initialize the React app -->
+  <script>
     window.onload = function() {
-      // Check dependencies
-      if (typeof Recharts === 'undefined') {
-        console.error("Recharts library is not loaded!");
+      // Check if dependencies loaded properly
+      if (typeof React === 'undefined' || typeof ReactDOM === 'undefined' || typeof Recharts === 'undefined') {
+        console.error("Required libraries failed to load.");
         document.getElementById('root').innerHTML = `
           <div class="p-6 max-w-6xl mx-auto">
             <div class="bg-red-50 p-4 rounded-lg border border-red-300 text-red-700">
               <h2 class="text-xl font-bold mb-2">Error Loading Application</h2>
-              <p>The Recharts library couldn't be loaded. Please try again later or check your internet connection.</p>
+              <p>One or more required libraries couldn't be loaded. Please check your internet connection and try again.</p>
             </div>
           </div>
         `;
         return;
       }
       
-      // Render the component from external file
+      // Render the SolarDashboard component from the external JS file
       const root = ReactDOM.createRoot(document.getElementById('root'));
       root.render(React.createElement(window.SolarDashboard));
     };
