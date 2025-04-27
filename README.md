@@ -33,12 +33,16 @@ This tool allows users to quickly calculate key financial metrics for a potentia
 ### Option 2: Run Locally
 
 1. Clone this repository or download the files:
+   ```
    git clone https://github.com/jessicasunxx/solar-financial-calculator.git
+   ```
 
 2. Navigate to the project directory:
+   ```
    cd solar-financial-calculator
+   ```
 
-3. Open solar-dashboard.html in any modern web browser.
+3. Open `solar-dashboard.html` in any modern web browser.
 
 ## Technical Details
 
