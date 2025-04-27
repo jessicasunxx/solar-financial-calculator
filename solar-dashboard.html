@@ -357,7 +357,7 @@
             <h1 className="text-3xl font-bold mb-2 text-center text-blue-800">Solar Project Financial Calculator</h1>
             <p className="text-center text-gray-600 mb-6">Evaluate the financial viability of your solar investment</p>
             
-            //input section 
+            {/* input section */}
             <div className="bg-blue-50 p-6 rounded-lg shadow-md mb-8">
               <h2 className="text-xl font-semibold mb-4 text-blue-800">Project Inputs</h2>
               <div className="grid md:grid-cols-2 gap-6">
@@ -401,7 +401,7 @@
               )}
             </div>
             
-            //results section
+            {/* result section */}
             {isLoading ? (
               <div className="text-center py-12">
                 <div className="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-600"></div>
@@ -409,7 +409,7 @@
               </div>
             ) : cashFlows.length > 0 ? (
               <div>
-                //results summary 
+                /{/* result summary */}
                 <div className="mb-8">
                   <h2 className="text-xl font-semibold mb-4 text-blue-800">Project Summary</h2>
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -470,7 +470,7 @@
                   </div>
                 </div>
 
-                //visualize cash flow 
+                {/* visualize cash flow */}
                 <div className="mb-8">
                   <h2 className="text-xl font-semibold mb-4 text-blue-800">25-Year Cash Flow Visualization</h2>
                   <div className="bg-white p-4 rounded-lg shadow-md" style={{ height: '400px' }}>
